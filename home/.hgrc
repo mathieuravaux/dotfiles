@@ -1,0 +1,105 @@
+[ui]
+verbose = True
+username = Mathieu Ravaux
+ssh = ssh -C
+#merge = opendiff -merge
+
+[diff]
+git = 1
+
+[defaults]
+addremove = --similarity 100
+email = --diffstat --git
+diff=-p -U 8 --color=auto --git
+cdiff = -q
+qapplied = -s
+qseries = -s
+qimport = --git
+qrefresh = --git
+glog =  -l15 --template '\033[33;40m{rev} \033[37;40m{desc|firstline|fill68} \033[1;30;40m({date|age} ago by {author|person})\033[0;37;40m \033[33;40m{tags}\033[37;40m \033[35;40m{branches}\033[37;40m\n\n'
+
+[alias]
+blame=annotate -u -n
+rec=record
+cm = commit --message
+. = summary
+? = compass
+: = status
+, = glog
+,+ = , -l1000000000
+
+
+[extensions]
+convert=
+extdiff=
+graphlog=
+record=
+mq =
+color =
+# hgext.win32text =
+hgk=
+hgext.rebase =
+rebase =
+patchbomb=
+mercurial_keyring = 
+hggit =
+progress =
+#cutehg=
+#qct=
+#MacOSXKeychain=/Library/Python/2.5/site-packages/hgext/hgkeychain.py
+
+hgext.extdiff=
+hgext.bookmarks=
+hgext.mq=
+# hgext.histedit=/Users/Mathieu/Library/Application Support/MacHg/0.9.7/extensions/histedit.py
+# hgext.collapse=/Users/Mathieu/Library/Application Support/MacHg/0.9.7/extensions/collapse.py
+eol =
+
+
+
+
+[email]
+from = Mathieu Ravaux <mathieu.ravaux@gmail.com>
+
+[color]
+status.modified = red bold underline
+status.added = green bold
+status.removed = red bold blue_background
+status.deleted = cyan bold underline
+status.unknown = magenta bold underline
+status.ignored = white bold
+status.clean = none
+status.copied = none
+qseries.applied = green bold
+qseries.unapplied = red bold
+qseries.missing = white bold
+
+
+[extdiff]
+#cmd.opendiff =  fmdiff
+#cmd.opendiff = opendiff-w
+cmd.ksdiff = /usr/local/bin/ksdiff-wrapper
+opts.ksdiff = hg
+
+#cmd.chdiff =
+#opts.chdiff = --wait
+
+#cmd.cdiff = colordiff
+#opts.cdiff = -uprN
+
+#cmd.kdiff3 =
+
+[merge-tools]
+filemerge.executable=/Developer/Applications/Utilities/FileMerge.app/Contents/MacOS/FileMerge
+filemerge.args=-left $other -right $local -ancestor $base -merge $output
+filemerge.gui=True
+#filemerge.executable = opendiff-w
+#filemerge.args = $local $other -ancestor $base -merge $output
+#hg-diff3-merge.priority = 100
+#kdiff3.args = $base $local $other -o $output
+
+[web]
+style = gitweb
+
+[eol]
+only-consistent = False

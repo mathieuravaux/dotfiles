@@ -1,0 +1,7 @@
+*~
+.DS_Store
+*.tmproj
+*.swp
+vendor/ruby/1.9.1
+vendor/ruby/1.8
+bundle_bin

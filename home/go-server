@@ -1,0 +1,5 @@
+
+GO_SERVER='/Library/Application Support/Go Server/'
+
+cd "$GO_SERVER"
+java -Xms512m -Xmx1024m -XX:PermSize=128m -XX:MaxPermSize=256m -Dignored=true -Duser.language=en -Duser.country=US -Dcruise.config.file="$GO_SERVER/cruise-config.xml" -Dcruise.config.dir="$GO_SERVER" -Dcruise.server.port=8153 -Dcruise.server.ssl.port=8154 -jar '/Applications/Go Server.app/go.jar'

@@ -1,0 +1,14 @@
+#!/bin/sh
+# Filename: ~/bin/work
+# This script sets Git to use the SOCKS proxy
+
+export IPHONE_IP='192.168.0.5'
+export IPAD_IP='192.168.0.10'
+
+export GIT_SSH="${HOME}/bin/socks-ssh"
+export GIT_PROXY_COMMAND="${HOME}/bin/socks-gw"
+
+
+export HTTP_PROXY="http://$IPAD_IP:8888"
+alias ssh=socks-ssh
+alias curl="curl -x $IPAD_IP:8888"

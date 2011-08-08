@@ -1,0 +1,10 @@
+--- 
+:backtrace: false
+:benchmark: false
+:verbose: true
+gem: --no-update-sources --no-ri --no-rdoc
+:sources: 
+# - http://rubygems.org/
+# - http://production.s3.rubygems.org
+- http://production.cf.rubygems.org
+rdoc: --inline-source --line-numbers

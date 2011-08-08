@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+PROGUARD_HOME=~/bin/proguard4.5
+
+java -Xmx1536M -jar $PROGUARD_HOME/lib/proguard.jar "$@"
